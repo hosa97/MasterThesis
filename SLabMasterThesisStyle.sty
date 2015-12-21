@@ -1,0 +1,25 @@
+\ProvidesPackage{SLabMasterThesisStyle}[2015/12/21 v0.1]
+
+\def\year#1{\def \@year{#1}}
+\def\advisingteacher#1{\def \@advisingteacher{#1}}
+\def\studentid#1{\def \@studentid{#1}}
+\def\department#1{\def \@department{#1}}
+
+\renewcommand{\maketitle}[0]{
+	\thispagestyle{empty}
+	\begin{center}
+		\Large {平成{\@year}年度修士論文} \\
+		\vspace{20mm}
+		\Huge \@title \\
+		\vspace{20mm}
+		\Large 指導教員：\@advisingteacher \\
+		\vspace{15mm}
+		\Large 学籍番号 \\
+		\Large \@studentid \\
+		\vspace{10mm}
+		\LARGE \@author \\
+		\vspace{15mm}
+		\Large \@department \\
+	\end{center}
+	\newpage
+}
