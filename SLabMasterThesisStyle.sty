@@ -1,5 +1,8 @@
 \ProvidesPackage{SLabMasterThesisStyle}[2015/12/21 v0.1]
 
+\newcommand{\figref}[1]{\textbf{図~\ref{#1}}}
+\newcommand{\tabref}[1]{\textbf{表\ref{#1}}}
+
 \def\year#1{\def \@year{#1}}
 \def\advisingteacher#1{\def \@advisingteacher{#1}}
 \def\studentid#1{\def \@studentid{#1}}
@@ -22,4 +25,13 @@
 		\Large \@department \\
 	\end{center}
 	\newpage
+	\setcounter{page}{1}
+}
+
+\newcommand{\reference}[1]{
+	\markright{参考文献}
+	\addcontentsline{toc}{chapter}{参考文献}
+	\renewcommand{\bibname}{参考文献}
+	\bibliographystyle{junsrt}
+	\bibliography{#1}
 }

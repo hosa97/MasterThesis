@@ -1,33 +1,52 @@
-\documentclass[11pt, a4paper]{jarticle}
+\documentclass[11pt, a4j, openany, oneside]{jbook}
 
 \usepackage[dvips]{graphicx}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage[hang,small,bf]{caption}
+\usepackage[subrefformat=parens]{subcaption}
 \usepackage{SLabMasterThesisStyle}
 
 
-%年度（和暦）
 \year{27} 
-
-%タイトル
 \title{独立同期モデルに基づく \\ 初学者の協調プログラミング支援} 
-
-%指導教員
 \advisingteacher{酒井 三四郎}
-
-%学籍番号
 \studentid{7043-0013}
-
-%名前
 \author{加藤 優哉}
-
-%所属
 \department{静岡大学大学院情報学研究科 \\ 情報学専攻}
 
 
 \begin{document}
 
+%表紙出力
 \maketitle
 
-あああ
+\tableofcontents
 
+\input{chapters/Introduction.tex}
+	
+\input{chapters/CollaborativeProgramming.tex}
+
+\input{chapters/ReratedWorks.tex}
+
+\input{chapters/Models.tex}
+
+\input{chapters/CheCoPro.tex}
+
+\input{chapters/ExperimentalMethod.tex}
+
+\input{chapters/Result.tex}
+
+\input{chapters/Discussion.tex}
+
+\input{chapters/Conclusion.tex}
+
+\input{chapters/Acknowledgment.tex}
+
+\newpage
+
+\reference{reference}
+
+\input{chapters/Publication.tex}
 
 \end{document}
