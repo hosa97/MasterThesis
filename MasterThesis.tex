@@ -1,18 +1,21 @@
 \documentclass[11pt, a4j, openany, oneside]{jbook}
 
+%必要に応じて適宜
 \usepackage[dvips]{graphicx}
 \usepackage{latexsym}
 \usepackage{amssymb}
 \usepackage[hang,small,bf]{caption}
-\usepackage[subrefformat=parens]{subcaption}
+
+%修論用自作パッケージ
 \usepackage{SLabMasterThesisStyle}
 
-
+%表紙出力のための著者情報
+%「修士論文」と自動で出るので，学部生はSLabMasterThesisStyle.styを編集して調整する．
 \year{27} 
-\title{独立同期モデルに基づく \\ 初学者の協調プログラミング支援} 
-\advisingteacher{酒井 三四郎}
-\studentid{7043-0013}
-\author{加藤 優哉}
+\title{修論作成のためのテンプレート} 
+\advisingteacher{情報 太郎}
+\studentid{7000-0000}
+\author{静大 花子}
 \department{静岡大学大学院情報学研究科 \\ 情報学専攻}
 
 
@@ -21,32 +24,24 @@
 %表紙出力
 \maketitle
 
+%目次出力
 \tableofcontents
 
+%ここから本文追加
+%こんな感じで章ごとにtexファイルを分けると編集しやすそう
 \input{chapters/Introduction.tex}
-	
-\input{chapters/CollaborativeProgramming.tex}
 
-\input{chapters/ReratedWorks.tex}
-
-\input{chapters/Models.tex}
-
-\input{chapters/CheCoPro.tex}
-
-\input{chapters/ExperimentalMethod.tex}
-
-\input{chapters/Result.tex}
-
-\input{chapters/Discussion.tex}
-
-\input{chapters/Conclusion.tex}
-
+%謝辞
+%多分名前変えればそのまま使える
 \input{chapters/Acknowledgment.tex}
 
+%目次のページ数調整用
 \newpage
 
+%引数はbibファイル名（拡張子不要）
 \reference{reference}
 
+%著者のこれまでに発表した論文もあれば載せるらしい
 \input{chapters/Publication.tex}
 
 \end{document}
