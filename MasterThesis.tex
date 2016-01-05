@@ -1,10 +1,11 @@
-\documentclass[11pt, a4j, openany, oneside]{jbook}
+\documentclass[11pt, a4j, openany, oneside, dvipdfmx]{jbook}
 
 %必要に応じて適宜
 \usepackage[dvips]{graphicx}
 \usepackage{latexsym}
 \usepackage{amssymb}
 \usepackage[hang,small,bf]{caption}
+\usepackage{pdfpages} % for insert pdf
 
 %修論用自作パッケージ
 \usepackage{SLabMasterThesisStyle}
@@ -30,6 +31,9 @@
 %ここから本文追加
 %こんな感じで章ごとにtexファイルを分けると編集しやすそう
 \input{chapters/Introduction.tex}
+
+% pdfのテスト用のtexファイル
+\input{chapters/Pdftest.tex}
 
 %謝辞
 %多分名前変えればそのまま使える
