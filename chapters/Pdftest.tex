@@ -1,0 +1,30 @@
+\chapter{pdfの挿入の仕方}
+事前準備として，documentclassにdvipdfmxの追加と，usepackageにpdfpagesの追加が必要である．そして次のように記述することにより，文章中にpdfファイルを挿入することが可能である．中カッコ内はファイル名である．
+
+\begin{verbatim}
+\includepdf[pages=-, 
+pagecommand={\thispagestyle{headings}, \markboth{}{}}, 
+width=\textwidth, height=\textheight, frame=true]
+{chapters/testpdfdata.pdf}
+\end{verbatim}
+
+文章にのせる都合上，複数行に分けたが，一形で書いても問題はない．
+
+
+各オプションについて簡単に説明する．pagesのあとに来るものは，ページ数を表しているが，ここで-(ハイフンを)指定することにより，すべてのページを参照することが可能である．pagecommandの中では文章のスタイルを決めることができ，デフォルトではページ数が表示されない問題があったため，thispagestyleにてheadingを指定し，markbothにてページ数以外の情報を出力しないよう調整を行った．width，heightは挿入されるpdfのサイズを決めることができるが，デフォルトの設定ではページいっぱいいっぱいまで使ってしまうため，ここではtextwidth，textheightを用い，本文領域内に収まるように大きさを指定する．
+
+その他のオプションについては下記サイトなどが参考になると思われる．
+
+\begin{itemize}
+\item pdfpages関係：http://abenori.blogspot.jp/2015/07/pdfpages.html
+\item pdfpages詳細：http://texdoc.net/texmf-dist/doc/latex/pdfpages/pdfpages.pdf
+\item thispagestyle関係：http://cns-guide.sfc.keio.ac.jp/2001/11/3/3.html
+\item pageparameter関係：http://cns-guide.sfc.keio.ac.jp/2001/11/3/3.html
+\end{itemize}
+
+また，この方法で挿入を行うと，次ページ以降にpdfが挿入されることが確認されているので，よく注意していただきたい．
+
+\includepdf[pages=-, 
+pagecommand={\thispagestyle{headings}, \markboth{}{}}, 
+width=\textwidth, height=\textheight, frame=true]
+{chapters/testpdfdata.pdf}
